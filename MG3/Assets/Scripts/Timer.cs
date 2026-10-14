@@ -43,7 +43,7 @@ public class Timer : MonoBehaviour
     // The method's name is a built-in one from Unity that runs EVERY FRAME.
     // It has no input or output.
     //
-    private void Countdown()
+    private void Update()
     {
         // Time.deltaTime is a variable provided to us by Unity that represents
         //      how much time has passed since the last frame.
@@ -71,7 +71,7 @@ public class Timer : MonoBehaviour
 
     public bool IsFinished()
     {
-        if (TimeLeft == 0)
+        if (TimeLeft <= 0)
         {
             return true;
         }
